@@ -1,90 +1,109 @@
 {
-  "users": {
-    "alice": {
-      "roles": ["admin"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-     "sunil": {
-      "roles": ["guest"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    }
-  },
-  "role_permissions": {
-    "customer": [
+  "users": [
       {
-        "action": "read",
-        "type": "dog"
+          "userId": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
+          "firstName": "Ali",
+          "phoneNumber": "+96171236834"
       },
       {
-        "action": "read",
-        "type": "cat"
+          "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+          "name": "Hasan",
+          "phoneNumber": "+96170149293"
       },
       {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
-        "type": "cat"
+          "userId": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
+          "name": "Nesma",
+          "phoneNumber": "+96171505659"
       }
-    ],
-    "employee": [
+  ],
+  "roles": [
       {
-        "action": "read",
-        "type": "dog"
+          "roleId": "1234",
+          "name": "admin",
+          "permissions": [
+              "001",
+              "002",
+              "003",
+              "004",
+              "007",
+              "008"
+          ]
       },
       {
-        "action": "read",
-        "type": "cat"
+          "roleId": "3333",
+          "name": "supervisor",
+          "permissions": [
+              "005",
+              "006"
+          ]
       },
       {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
+          "roleId": "5051",
+          "name": "doorkeeper",
+          "permissions": [
+              "003",
+              "002"
+          ]
       }
-    ],
-    "billing": [
+  ],
+  "permissions": [
       {
-        "action": "read",
-        "type": "finance"
+          "permissionId": "001",
+          "resource": "event",
+          "action": "create"
       },
       {
-        "action": "update",
-        "type": "finance"
+          "permissionId": "002",
+          "resource": "event",
+          "action": "get-one"
+      },
+      {
+          "permissionId": "003",
+          "resource": "event",
+          "action": "update"
+      },
+      {
+          "permissionId": "004",
+          "resource": "event",
+          "action": "get-all"
+      },
+      {
+          "permissionId": "005",
+          "resource": "user",
+          "action": "create"
+      },
+      {
+          "permissionId": "006",
+          "resource": "user",
+          "action": "get-one"
+      },
+      {
+          "permissionId": "007",
+          "resource": "user",
+          "action": "update"
+      },
+      {
+          "permissionId": "008",
+          "resource": "user",
+          "action": "get-all"
       }
-    ],
-    "guest": [
-     {
-       "action": "read",
-       "type": "cat"
-     },
-     {
-       "action": "read",
-       "type": "finance"
-     }
-    ]
-  }
+  ],
+  "users_roles": [
+      {
+          "userId": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
+          "roleId": "5051"
+      },
+      {
+          "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+          "roleId": "5051"
+      },
+      {
+          "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+          "roleId": "3333"
+      },
+      {
+          "userId": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
+          "roleId": "1234"
+      }
+  ]
 }
