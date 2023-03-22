@@ -29,9 +29,9 @@ allow {
 	user_is_admin
 }
 
-allow {
-	1 == 1
-}
+# allow {
+# 	1 == 1
+# }
 
 # Allow bob to do anything
 #allow {
