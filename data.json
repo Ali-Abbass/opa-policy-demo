@@ -1,135 +1,135 @@
 {
   "users": [
     {
-      "userId": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
-      "firstName": "Ali",
-      "phoneNumber": "+96171236834"
+      "user_id": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
+      "name": "Ali",
+      "phone_number": "+96171236834"
     },
     {
-      "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+      "user_id": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
       "name": "Hasan",
-      "phoneNumber": "+96170149293"
+      "phone_number": "+96170149293"
     },
     {
-      "userId": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
+      "user_id": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
       "name": "Nesma",
-      "phoneNumber": "+96171505659"
+      "phone_number": "+96171505659"
     }
   ],
   "roles": [
     {
-      "roleId": "1234",
+      "role_id": "1234",
       "name": "admin"
     },
     {
-      "roleId": "3333",
+      "role_id": "3333",
       "name": "supervisor"
     },
     {
-      "roleId": "5051",
+      "role_id": "5051",
       "name": "doorkeeper"
     }
   ],
   "roles_permissions": [
     {
-      "roleId": "1234",
-      "permissionId": "001"
+      "role_id": "1234",
+      "permission_id": "001"
     },
     {
-      "roleId": "1234",
-      "permissionId": "002"
+      "role_id": "1234",
+      "permission_id": "002"
     },
     {
-      "roleId": "1234",
-      "permissionId": "003"
+      "role_id": "1234",
+      "permission_id": "003"
     },
     {
-      "roleId": "1234",
-      "permissionId": "004"
+      "role_id": "1234",
+      "permission_id": "004"
     },
     {
-      "roleId": "1234",
-      "permissionId": "007"
+      "role_id": "1234",
+      "permission_id": "007"
     },
     {
-      "roleId": "1234",
-      "permissionId": "008"
+      "role_id": "1234",
+      "permission_id": "008"
     },
     {
-      "roleId": "3333",
-      "permissionId": "005"
+      "role_id": "3333",
+      "permission_id": "005"
     },
     {
-      "roleId": "3333",
-      "permissionId": "006"
+      "role_id": "3333",
+      "permission_id": "006"
     },
     {
-      "roleId": "5051",
-      "permissionId": "003"
+      "role_id": "5051",
+      "permission_id": "003"
     },
     {
-      "roleId": "5051",
-      "permissionId": "002"
+      "role_id": "5051",
+      "permission_id": "002"
     }
   ],
   "permissions": [
     {
-      "permissionId": "001",
+      "permission_id": "001",
       "resource": "event",
       "action": "create"
     },
     {
-      "permissionId": "002",
+      "permission_id": "002",
       "resource": "event",
       "action": "get-one"
     },
     {
-      "permissionId": "003",
+      "permission_id": "003",
       "resource": "event",
       "action": "update"
     },
     {
-      "permissionId": "004",
+      "permission_id": "004",
       "resource": "event",
       "action": "get-all"
     },
     {
-      "permissionId": "005",
+      "permission_id": "005",
       "resource": "user",
       "action": "create"
     },
     {
-      "permissionId": "006",
+      "permission_id": "006",
       "resource": "user",
       "action": "get-one"
     },
     {
-      "permissionId": "007",
+      "permission_id": "007",
       "resource": "user",
       "action": "update"
     },
     {
-      "permissionId": "008",
+      "permission_id": "008",
       "resource": "user",
       "action": "get-all"
     }
   ],
   "users_roles": [
     {
-      "userId": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
-      "roleId": "5051"
+      "user_id": "2897d37b-0dcf-42bf-9e9d-71b8610f5180",
+      "role_id": "5051"
     },
     {
-      "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
-      "roleId": "5051"
+      "user_id": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+      "role_id": "5051"
     },
     {
-      "userId": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
-      "roleId": "3333"
+      "user_id": "8e529e51-8b0d-499b-8f46-21f7e85a0159",
+      "role_id": "3333"
     },
     {
-      "userId": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
-      "roleId": "1234"
+      "user_id": "16f289eb-bdb5-4617-a9bb-c6cdb54aa29b",
+      "role_id": "1234"
     }
   ]
 }

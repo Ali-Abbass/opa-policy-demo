@@ -6,7 +6,7 @@ default allow := false
 
 
 allow {
-	user := input.userId
+	user := input.user_id
 	resource := input.resource
 	action := input.action
 	user_role := get_user_role(user)
@@ -15,19 +15,19 @@ allow {
 }
 
 get_user_role(user_id) = role_id {
-	user_roles := [ur | ur := data.users_roles[_]; ur.userid == user_id]
+	user_roles := [ur | ur := data.users_roles[_]; ur.user_id == user_id]
 	count(user_roles) > 0
-	role_id := [role | some i; role := user_roles[i].roleid]
+	role_id := [role | some i; role := user_roles[i].role_id]
 }
 
 get_user_permission(role_id) = permission_id {
-	roles_permissions := [rp.permissionId | rp := data.roles_permissions[_]; rp.roleId == role_id[_]]
+	roles_permissions := [rp.permissionId | rp := data.roles_permissions[_]; rp.role_id == role_id[_]]
 	count(roles_permissions) > 0
 	permission_id := [ permission | some i; permission := roles_permissions[i]]
 }
 
 user_has_permission(permission_id, resource, action) {
-	permissions := [p | p := data.permissions[_]; p.permissionId == permission_id[_]]
+	permissions := [p | p := data.permissions[_]; p.permission_id == permission_id[_]]
 # 	count(permissions) == 1
 	permissions[_].resource == resource
 	permissions[_].action == action
