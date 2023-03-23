@@ -15,9 +15,9 @@ allow {
 }
 
 get_user_role(user_id) = role_id {
-	user_roles := [ur | ur := data.users_roles[_]; ur.userId == user_id]
+	user_roles := [ur | ur := data.users_roles[_]; ur.userid == user_id]
 	count(user_roles) > 0
-	role_id := [role | some i; role := user_roles[i].roleId]
+	role_id := [role | some i; role := user_roles[i].roleid]
 }
 
 get_user_permission(role_id) = permission_id {
